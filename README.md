@@ -1,7 +1,5 @@
 # SpringBoot-Microservice-K8s
 
-**SpringBoot-Microservice-k8s**
-
 **_This Project is a set of Microservice which we already developed in SpringBoot-Microservice project._**
 
 **_The difference is here we can directly start microservices using Docker and Kubernetes. We need to follow the below steps to make this service up and running using Kubernetes and Docker File._**
@@ -45,4 +43,11 @@ x)**Then you can use the below commands to check the status:**
     4)kubectl cluster-info: Get the information of cluster
 
     5)minikube service list: Get the list of services available
+
+xi)**Download kube-forwarder for windows and use it with minikube cluster.**
        
+xii)**Once its started open kube-forwarder and add two resources there in default cluster as minikube.**
+    
+    1)First will be the eureka-lb with kind as Service, name as eureka-lb, local port as 8761 and resource port as 80
+
+    2)Second is cloud-gateway-svc with kind as Service, name as cloud-gateway-svc, local port as 9191 and resource port as 80
