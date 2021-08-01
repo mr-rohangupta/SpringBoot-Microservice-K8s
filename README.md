@@ -28,7 +28,7 @@ vi)**_Finally you can start Docker for Windows first then you can start minikube
 
 vii)**_Now you can open the services one by one in intellij Idea and use `mvn clean package dockerfile:push` command to push the docker image of every service._**
 
-viii)**_Once all the images are pushed in docker.io then you can navigate to k8s folder with powershell and use `kubectl apply -f ./` command._**
+viii)**_Once all the images are pushed in docker.io then you can navigate to k8s folder with powershell and use `kubectl apply -f ./` command also if you want to delete every image navigate to the same folder and write `kubectl delete -f ./` command._**
 
 ix)**_kubectl apply command will create all the deployments, services etc for every service._**
 
