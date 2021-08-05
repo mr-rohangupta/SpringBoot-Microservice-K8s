@@ -50,6 +50,7 @@ public class SecurityCredentialsConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 // allow only post request with /auth
                 .antMatchers(HttpMethod.POST, jwtConfig.getUri()).permitAll()
+                .antMatchers(HttpMethod.GET,"/actuator/hystrix.stream").permitAll()
                 //any other requests must be authenticated
                 .anyRequest().authenticated();
     }

@@ -27,6 +27,7 @@ kind: Service
 metadata:
   name: iam-auth-service-svc
 spec:
+  type: LoadBalancer
   ports:
     - targetPort: 9100
       port: 80

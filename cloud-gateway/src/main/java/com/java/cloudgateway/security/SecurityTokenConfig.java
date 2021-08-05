@@ -40,6 +40,7 @@ public class SecurityTokenConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 //Allow only who are using the auth service
                 .antMatchers(HttpMethod.POST, jwtConfig.getUri()).permitAll()
+                .antMatchers(HttpMethod.GET, "/actuator/hystrix.stream").permitAll()
                 //Must be an admin if trying to access admin area (Authentication is required here)
                 .antMatchers("/department" + "/admin/**").hasRole("ADMIN")
                 //Any Other request must be authenticated
